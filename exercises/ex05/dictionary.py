@@ -2,6 +2,7 @@
 
 __author__ = "730387535"
 
+
 def invert(user_input: dict[str, str]) -> dict[str, str]:
     """Inverts the keys and values of a given dictionary."""
     keys = list(user_input.keys())
@@ -15,7 +16,7 @@ def invert(user_input: dict[str, str]) -> dict[str, str]:
     return inverted_dict
 
 
-def favorite_colors(user_colors: dict[str, str]) -> str:
+def favorite_color(user_colors: dict[str, str]) -> str:
     """Return highest frequency color."""
     values = list(user_colors.values())
     counter = 0
@@ -30,7 +31,7 @@ def favorite_colors(user_colors: dict[str, str]) -> str:
 
 def count(values: list[str]) -> dict[str, int]:
     """Count the occurances of a given value."""
-    counter = {}
+    counter: dict[str, int] = {}
     for element in values:
         if element in counter:
             counter[element] += 1
@@ -41,11 +42,13 @@ def count(values: list[str]) -> dict[str, int]:
 
 def alphabetizer(user_words: list[str]) -> dict[str, list[str]]:
     """Sort words by first letter."""
-    sorted_words = {}
+    sorted_words: dict[str, list[str]] = {}
     for element in user_words:
         first_letter = element[0].lower()
         if first_letter not in sorted_words:
             sorted_words[first_letter] = []
+            sorted_words[first_letter].append(element)
+        else:
             sorted_words[first_letter].append(element)
     return sorted_words
 
