@@ -55,7 +55,7 @@ def alphabetizer(user_words: list[str]) -> dict[str, list[str]]:
 
 def update_attendance(attendance_log: dict[str, list[str]], day: str, student: str) -> None:
     """Updates the attendance sheet for students."""
-    if day in attendance_log:
+    if day in attendance_log and student not in attendance_log[day]:
         attendance_log[day].append(student)
     else:
         attendance_log[day] = [student]
