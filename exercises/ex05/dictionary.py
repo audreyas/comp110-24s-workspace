@@ -20,13 +20,14 @@ def favorite_color(user_colors: dict[str, str]) -> str:
     """Return highest frequency color."""
     values = list(user_colors.values())
     counter = 0
-    color = values[0]
-    for i in values:
-        curr_frequency = values.count(i)
-        if (curr_frequency > counter):
-            counter = curr_frequency
-            color = i
-    return color
+    if len(values) > 0:
+        color = values[0]
+        for i in values:
+            curr_frequency = values.count(i)
+            if (curr_frequency > counter):
+                counter = curr_frequency
+                color = i
+        return color
 
 
 def count(values: list[str]) -> dict[str, int]:
