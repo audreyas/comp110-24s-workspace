@@ -1,7 +1,7 @@
 """File to define River class"""
 
 from exercises.ex09.fish import Fish
-from exercises.ex09.bear import Bear
+from exercises.ex09.bear import Bear 
 
 class River:
     
