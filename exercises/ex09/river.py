@@ -38,8 +38,8 @@ class River:
     def view_river(self):
         return None
         print("~~~ Day", self.day, ": ~~~")
-        print("Fish population:", self.fish)
-        print("Bear population:", self.bears)
+        print("Fish population:", len(self.fish))
+        print("Bear population:", len(self.bears))
 
             
     def one_river_day(self):
